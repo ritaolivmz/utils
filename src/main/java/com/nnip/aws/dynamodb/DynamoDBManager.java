@@ -209,6 +209,7 @@ public class DynamoDBManager {
         clientConfiguration.setProxyUsername(dynamoDBClient.getProxyUserName());
         clientConfiguration.setProxyPort(dynamoDBClient.getProxyPort());
         clientConfiguration.setProxyPassword(dynamoDBClient.getProxyPassword());
+        clientConfiguration.setUseThrottleRetries(true);
 
         BasicAWSCredentials awsCreds = new BasicAWSCredentials(dynamoDBClient.getAccessKeyId(),
                 dynamoDBClient.getSecretAccessKey());
