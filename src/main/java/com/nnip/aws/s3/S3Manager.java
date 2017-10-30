@@ -24,6 +24,7 @@ public class S3Manager {
             clientConfiguration.setProxyPort(s3Client.getProxyPort());
             clientConfiguration.setProxyPassword(s3Client.getProxyPassword());
             clientConfiguration.setUseThrottleRetries(true);
+            
             awsS3Client = new AmazonS3Client(new BasicAWSCredentials(s3Client.getAccessKey(), s3Client.getSecretKey()),clientConfiguration);
         }
         catch(Exception e) {
